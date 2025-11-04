@@ -694,15 +694,16 @@ button.learn-more:hover .button-text {
   
   .parts-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
+    gap: 5px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
   }
   
   .menu__link {
-    font-size: 1rem;
-    padding: 12px 15px;
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    margin: 3px 0;
   }
   
   .animated-button {
@@ -745,16 +746,16 @@ button.learn-more:hover .button-text {
   
   .parts-grid {
     grid-template-columns: 1fr;
-    gap: 5px;
-    padding: 5px;
+    gap: 3px;
+    padding: 3px;
     display: flex;
     flex-direction: column;
   }
   
   .menu__link {
-    font-size: 0.9rem;
-    padding: 8px 10px;
-    margin: 5px 0;
+    font-size: 0.85rem;
+    padding: 5px 6px;
+    margin: 2px 0;
   }
   
   .animated-button {
@@ -774,19 +775,19 @@ button.learn-more:hover .button-text {
   
   /* Improve touch targets for mobile */
   .menu__link {
-    min-height: 40px;
+    min-height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .back-btn {
-    min-height: 40px;
+    min-height: 36px;
     width: 100%;
   }
   
   .animated-button {
-    min-height: 40px;
+    min-height: 36px;
     width: 100%;
   }
   
@@ -813,14 +814,14 @@ button.learn-more:hover .button-text {
   }
   
   .parts-grid {
-    gap: 3px;
-    padding: 3px;
+    gap: 2px;
+    padding: 2px;
   }
   
   .menu__link {
     font-size: 0.8rem;
-    padding: 6px 8px;
-    margin: 3px 0;
+    padding: 4px 5px;
+    margin: 1px 0;
   }
   
   .reasons-list li {
