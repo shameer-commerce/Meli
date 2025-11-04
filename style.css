@@ -1,0 +1,865 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+section .wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+section .wave span {
+  content: "";
+  position: absolute;
+  width: 325vh;
+  height: 325vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  font-size: 2em;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+section .wave span:nth-child(1) {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+section .wave span:nth-child(2) {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+section .wave span:nth-child(3) {
+  border-radius: 42.5%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 15s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Animated background for home page */
+.home-page {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1.5s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.explore-btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  background: #ff7f50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #ff9966;
+  transform: scale(1.1);
+}
+
+/* Parts page */
+.parts-page {
+  background: radial-gradient(circle at top, #16222A, #3A6073);
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
+}
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* From Uiverse.io by ArturCodeCraft */
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+}
+
+/* <main-style> ============================ */
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+  display: block;
+  padding: 15px 20px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 50%;
+  transition: width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.menu__link.coming-soon {
+  color: #aaa;
+  cursor: default;
+}
+
+.menu__link.coming-soon:hover::before {
+  width: 0;
+  left: 50%;
+}
+
+span.menu__link {
+  color: #aaa;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Reasons page */
+.reasons-page {
+  background: linear-gradient(to bottom right, #232526, #414345);
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.reasons-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.reasons-list li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  animation: fadeInUp 0.8s ease;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background: #ff7f50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  background: #ff9966;
+}
+
+/* --- Fancy "Learn More" Button from Uiverse.io --- */
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+  margin-top: 20px;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #ff7f50; /* Custom orange tone for your theme */
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button.learn-more:hover .circle {
+  width: 100%;
+  background: #ff9966;
+}
+
+button.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button.learn-more:hover .button-text {
+  color: #fff;
+}
+
+/* --- Modern Animated Button from Uiverse.io by gharsh11032000 --- */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 24px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 14px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: greenyellow;
+  box-shadow: 0 0 0 2px greenyellow;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 20px;
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 20px;
+  fill: greenyellow;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 12px;
+}
+
+.animated-button .arr-2 {
+  left: -20%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-10px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -20%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 12px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(10px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+/* From Uiverse.io by TCdesign-dev */ 
+#bottone1 {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border-radius: 9px;
+  background: #d5f365;
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 0.9rem;
+  margin: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#bottone1:hover {
+  box-shadow: 7px 5px 56px -14px #C3D900;
+}
+
+#bottone1:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #C3D900;
+}
+
+/* From Uiverse.io by alexroumi */
+.parts-grid button {
+  padding: 12px 20px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 14px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.parts-grid button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+}
+
+.parts-grid button:hover {
+  color: #e8e8e8;
+}
+
+.parts-grid button:hover::before {
+  width: 100%;
+}
+
+/* From Uiverse.io by iZOXVL */
+.boton-elegante {
+  padding: 8px 15px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #292929;
+}
+
+/* From Uiverse.io by reshades */
+.button {
+  background-color: #ffffff00;
+  color: #fff;
+  width: 100%;
+  height: 2.9em;
+  border: #3654ff 0.2em solid;
+  border-radius: 11px;
+  text-align: left;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: #3654ff;
+  cursor: pointer;
+}
+
+.button svg {
+  width: 1.6em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+  stroke: white;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button:hover svg {
+  transform: translateX(5px) translateY(-50%);
+}
+
+.text {
+  margin: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: calc(100% - 3em);
+}
+
+/* From Uiverse.io by Wlidha09 */
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #fff;
+  min-height: 50px;
+  padding: 0 20px;
+  font-size: 17px;
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+.btn-white::before {
+  content: "";
+  background-color: #fff;
+  display: block;
+  width: 45px;
+  height: 1px;
+  margin-right: 20px;
+}
+
+.btn-white::after {
+  content: "";
+  background-color: #fff;
+  display: block;
+  width: 0%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn-white:hover {
+  color: #232963;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn-white:hover::after {
+  width: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn-white:hover::before {
+  background-color: #232963;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .content {
+    font-size: 1.5em;
+    width: 95%;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .parts-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu__link {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+  
+  .animated-button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  
+  .back-btn {
+    padding: 8px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .parts-page, .reasons-page {
+    padding: 20px 10px;
+  }
+  
+  .reasons-list {
+    padding: 0 10px;
+  }
+  
+  .reasons-list li {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    font-size: 1.2em;
+    width: 95%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .parts-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu__link {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    margin: 5px 0;
+  }
+  
+  .animated-button {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+  
+  .back-btn {
+    padding: 6px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .reasons-list li {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  
+  /* Improve touch targets for mobile */
+  .menu__link {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .back-btn {
+    min-height: 40px;
+    width: 100%;
+  }
+  
+  .animated-button {
+    min-height: 40px;
+    width: 100%;
+  }
+  
+  /* Adjust wave animation for better performance on mobile */
+  section .wave span {
+    width: 200vh;
+    height: 200vh;
+  }
+}
+
+/* Additional mobile enhancements */
+@media screen and (max-width: 320px) {
+  .content {
+    font-size: 1em;
+    width: 95%;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .parts-grid {
+    gap: 3px;
+    padding: 3px;
+  }
+  
+  .menu__link {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+    margin: 3px 0;
+  }
+  
+  .reasons-list li {
+    padding: 4px;
+    font-size: 0.75rem;
+  }
+  
+  /* Simplify wave animation on very small screens */
+  section .wave span {
+    width: 150vh;
+    height: 150vh;
+  }
+  
+  section .wave span:nth-child(1) {
+    animation-duration: 10s;
+  }
+  
+  section .wave span:nth-child(2) {
+    animation-duration: 20s;
+  }
+  
+  section .wave span:nth-child(3) {
+    animation-duration: 30s;
+  }
+}
+
+/* Ensure proper scrolling on mobile devices */
+html, body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Improve tap highlights on mobile */
+a, button {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fix for mobile Safari address bar */
+@media screen and (max-width: 768px) {
+  section {
+    min-height: -webkit-fill-available;
+  }
+}
