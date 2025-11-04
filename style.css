@@ -746,16 +746,16 @@ button.learn-more:hover .button-text {
   
   .parts-grid {
     grid-template-columns: 1fr;
-    gap: 3px;
-    padding: 3px;
+    gap: 2px;
+    padding: 2px;
     display: flex;
     flex-direction: column;
   }
   
   .menu__link {
-    font-size: 0.85rem;
-    padding: 5px 6px;
-    margin: 2px 0;
+    font-size: 0.8rem;
+    padding: 4px 5px;
+    margin: 1px 0;
   }
   
   .animated-button {
@@ -775,19 +775,19 @@ button.learn-more:hover .button-text {
   
   /* Improve touch targets for mobile */
   .menu__link {
-    min-height: 36px;
+    min-height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .back-btn {
-    min-height: 36px;
+    min-height: 32px;
     width: 100%;
   }
   
   .animated-button {
-    min-height: 36px;
+    min-height: 32px;
     width: 100%;
   }
   
@@ -795,6 +795,20 @@ button.learn-more:hover .button-text {
   section .wave span {
     width: 200vh;
     height: 200vh;
+  }
+  
+  /* Prevent scrolling on mobile */
+  body {
+    overflow: hidden;
+  }
+  
+  section {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .content {
+    overflow-y: hidden;
   }
 }
 
@@ -814,19 +828,19 @@ button.learn-more:hover .button-text {
   }
   
   .parts-grid {
-    gap: 2px;
-    padding: 2px;
+    gap: 1px;
+    padding: 1px;
   }
   
   .menu__link {
-    font-size: 0.8rem;
-    padding: 4px 5px;
+    font-size: 0.75rem;
+    padding: 3px 4px;
     margin: 1px 0;
   }
   
   .reasons-list li {
-    padding: 4px;
-    font-size: 0.75rem;
+    padding: 3px;
+    font-size: 0.7rem;
   }
   
   /* Simplify wave animation on very small screens */
