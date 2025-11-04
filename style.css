@@ -680,58 +680,6 @@ button.learn-more:hover .button-text {
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .content {
-    font-size: 1.5em;
-    width: 95%;
-  }
-  
-  .title {
-    font-size: 1.8rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-  }
-  
-  .parts-grid {
-    grid-template-columns: 1fr;
-    gap: 5px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .menu__link {
-    font-size: 0.9rem;
-    padding: 6px 8px;
-    margin: 3px 0;
-  }
-  
-  .animated-button {
-    padding: 10px 20px;
-    font-size: 12px;
-  }
-  
-  .back-btn {
-    padding: 8px 24px;
-    font-size: 0.9rem;
-  }
-  
-  .parts-page, .reasons-page {
-    padding: 20px 10px;
-  }
-  
-  .reasons-list {
-    padding: 0 10px;
-  }
-  
-  .reasons-list li {
-    padding: 6px;
-    font-size: 0.85rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .content {
     font-size: 1.2em;
     width: 95%;
   }
@@ -741,21 +689,21 @@ button.learn-more:hover .button-text {
   }
   
   .section-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .parts-grid {
     grid-template-columns: 1fr;
-    gap: 2px;
-    padding: 2px;
+    gap: 3px;
+    padding: 3px;
     display: flex;
     flex-direction: column;
   }
   
   .menu__link {
     font-size: 0.8rem;
-    padding: 4px 5px;
-    margin: 1px 0;
+    padding: 4px 6px;
+    margin: 2px 0;
   }
   
   .animated-button {
@@ -768,26 +716,78 @@ button.learn-more:hover .button-text {
     font-size: 0.8rem;
   }
   
+  .parts-page, .reasons-page {
+    padding: 15px 8px;
+  }
+  
+  .reasons-list {
+    padding: 0 8px;
+  }
+  
   .reasons-list li {
     padding: 5px;
     font-size: 0.8rem;
   }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    font-size: 1em;
+    width: 95%;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+  }
+  
+  .parts-grid {
+    grid-template-columns: 1fr;
+    gap: 1px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu__link {
+    font-size: 0.7rem;
+    padding: 3px 4px;
+    margin: 1px 0;
+  }
+  
+  .animated-button {
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+  
+  .back-btn {
+    padding: 5px 15px;
+    font-size: 0.7rem;
+  }
+  
+  .reasons-list li {
+    padding: 4px;
+    font-size: 0.7rem;
+  }
   
   /* Improve touch targets for mobile */
   .menu__link {
-    min-height: 32px;
+    min-height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .back-btn {
-    min-height: 32px;
+    min-height: 24px;
     width: 100%;
   }
   
   .animated-button {
-    min-height: 32px;
+    min-height: 24px;
     width: 100%;
   }
   
@@ -798,8 +798,9 @@ button.learn-more:hover .button-text {
   }
   
   /* Prevent scrolling on mobile */
-  body {
+  html, body {
     overflow: hidden;
+    height: 100%;
   }
   
   section {
@@ -809,38 +810,47 @@ button.learn-more:hover .button-text {
   
   .content {
     overflow-y: hidden;
+    height: 100%;
+  }
+  
+  /* Ensure content fits within screen */
+  .section-title {
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 }
 
 /* Additional mobile enhancements */
 @media screen and (max-width: 320px) {
   .content {
-    font-size: 1em;
+    font-size: 0.9em;
     width: 95%;
   }
   
   .title {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   
   .section-title {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
   
   .parts-grid {
-    gap: 1px;
-    padding: 1px;
+    gap: 0px;
+    padding: 0px;
   }
   
   .menu__link {
-    font-size: 0.75rem;
-    padding: 3px 4px;
-    margin: 1px 0;
+    font-size: 0.65rem;
+    padding: 2px 3px;
+    margin: 0px 0;
   }
   
   .reasons-list li {
     padding: 3px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
   
   /* Simplify wave animation on very small screens */
@@ -859,6 +869,10 @@ button.learn-more:hover .button-text {
   
   section .wave span:nth-child(3) {
     animation-duration: 30s;
+  }
+  
+  .parts-page, .reasons-page {
+    padding: 10px 5px;
   }
 }
 
